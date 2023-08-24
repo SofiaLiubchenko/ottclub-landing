@@ -1,7 +1,17 @@
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "reset";
+
+@import "./blocks/header.scss";
+@import "./blocks/container.scss";
 
 body {
-  background: $c-gray;
+  background: #01313f;
+  color: $white;
+  font-family: "Inter", sans-serif;
+}
+
+img {
+  display: block;
 }

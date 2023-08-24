@@ -1,0 +1,80 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  padding: 16px 0 8px;
+
+  @include onBreakpoint375 {
+    padding: 44px 0 8px;
+  }
+
+  @include onBreakpoint768 {
+    padding: 23px 0;
+  }
+
+  @include onBreakpoint1920 {
+    padding: 30px 0;
+  }
+
+  &__logo-pic {
+    @include svg-size(56px);
+
+    @include onBreakpoint768 {
+      @include svg-size(64px);
+    }
+
+    @include onBreakpoint990 {
+      @include svg-size(72px);
+    }
+
+    @include onBreakpoint1920 {
+      @include svg-size(96px);
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+  }
+
+  &__list-block {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__list-block :not(.header__login) {
+    display: none;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @include onBreakpoint768 {
+      display: flex;
+    }
+  }
+
+  &__facebook-pic,
+  &__telegram-pic {
+    @include svg-size(24px);
+  }
+
+  &__register {
+    font-weight: 600;
+  }
+
+  &__login {
+    padding: 9px 24px;
+    border-radius: 5px;
+    border: 2px solid $white;
+
+    @include onBreakpoint768 {
+      padding: 11px 24px;
+    }
+  }
+}

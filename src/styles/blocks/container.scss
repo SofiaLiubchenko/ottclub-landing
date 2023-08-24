@@ -1,0 +1,19 @@
+.container {
+  padding: 0 16px;
+
+  @include onBreakpoint768 {
+    padding: 0 40px;
+  }
+
+  @include onBreakpoint990 {
+    padding: 0 48px;
+  }
+
+  @include onBreakpoint1440 {
+    padding: 0 172px;
+  }
+
+  @include onBreakpoint1920 {
+    padding: 0 229px;
+  }
+}

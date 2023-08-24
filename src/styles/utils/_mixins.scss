@@ -1,6 +1,34 @@
-@mixin hover($_property, $_toValue) {
-  transition: #{$_property} 0.3s;
-  &:hover {
-    #{$_property}: $_toValue;
+@mixin onBreakpoint375 {
+  @media (min-width: 375px) {
+    @content;
   }
+}
+
+@mixin onBreakpoint768 {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin onBreakpoint990 {
+  @media (min-width: 990px) {
+    @content;
+  }
+}
+
+@mixin onBreakpoint1440 {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin onBreakpoint1920 {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin svg-size($s) {
+  width: $s;
+  height: $s;
 }
