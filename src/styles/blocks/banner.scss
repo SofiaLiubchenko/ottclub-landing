@@ -1,0 +1,109 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include onBreakpoint768 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  &__heading {
+    margin-bottom: 8px;
+    text-align: center;
+
+    @include onBreakpoint768 {
+      text-align: start;
+    }
+
+    @include onBreakpoint990 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__pic {
+    width: 100%;
+    max-height: 175px;
+    margin-bottom: 16px;
+
+    @include onBreakpoint768 {
+      grid-area: 1 / 2 / 4 / 3;
+      position: relative;
+      right: -40%;
+      max-height: 560px;
+      height: 100%;
+      margin-bottom: 0;
+    }
+
+    @include onBreakpoint990{
+      right: -30%;
+    }
+
+    @include onBreakpoint1440{
+      right: -10%;
+    }
+
+    @include onBreakpoint1920{
+      right: -5%;
+    }
+  }
+
+  &__text {
+    margin-bottom: 24px;
+    font-size: 16px;
+    opacity: 0.8;
+    text-align: center;
+
+    @include onBreakpoint375 {
+      margin-bottom: 32px;
+    }
+
+    @include onBreakpoint768 {
+      text-align: start;
+    }
+
+    @include onBreakpoint990 {
+      margin-bottom: 0;
+    }
+
+    @include onBreakpoint1440 {
+      font-size: 20px;
+    }
+
+    @include onBreakpoint1920 {
+      font-size: 25px;
+    }
+  }
+
+  &__button {
+    padding: 14px;
+    border-radius: 5px;
+    background: $button-red;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 16px;
+
+    @include onBreakpoint375 {
+      padding: 16px 24px;
+      margin-bottom: 24px;
+    }
+
+    @include onBreakpoint768 {
+      grid-area: 3 / 1 / 4 / 2;
+      margin-bottom: 0;
+      align-self: center;
+      max-width: 350px;
+    }
+
+    @include onBreakpoint1440 {
+      padding: 18px 32px;
+    }
+
+    @include onBreakpoint1920{
+      padding: 24px 40px;
+      max-width: 450px;
+    }
+  }
+}

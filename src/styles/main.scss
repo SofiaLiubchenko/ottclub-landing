@@ -5,11 +5,13 @@
 
 @import "./blocks/header.scss";
 @import "./blocks/container.scss";
+@import "./blocks/banner.scss";
 
 body {
-  background: #01313f;
+  background: #131212;
   color: $white;
   font-family: "Inter", sans-serif;
+  overflow-x: hidden;
 }
 
 img {
