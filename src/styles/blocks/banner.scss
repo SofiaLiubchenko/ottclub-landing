@@ -36,15 +36,15 @@
       margin-bottom: 0;
     }
 
-    @include onBreakpoint990{
+    @include onBreakpoint990 {
       right: -30%;
     }
 
-    @include onBreakpoint1440{
+    @include onBreakpoint1440 {
       right: -10%;
     }
 
-    @include onBreakpoint1920{
+    @include onBreakpoint1920 {
       right: -5%;
     }
   }
@@ -78,12 +78,13 @@
 
   &__button {
     padding: 14px;
+    margin-bottom: 16px;
     border-radius: 5px;
     background: $button-red;
     text-align: center;
     font-weight: 600;
     font-size: 15px;
-    margin-bottom: 16px;
+    cursor: pointer;
 
     @include onBreakpoint375 {
       padding: 16px 24px;
@@ -101,7 +102,7 @@
       padding: 18px 32px;
     }
 
-    @include onBreakpoint1920{
+    @include onBreakpoint1920 {
       padding: 24px 40px;
       max-width: 450px;
     }
